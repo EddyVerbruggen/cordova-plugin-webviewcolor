@@ -25,11 +25,15 @@ This plugin allows you to change the background color of the iOS WebView.
 
 iOS 7 screenshot - original:
 
-![ScreenShot](https://raw.github.com/EddyVerbruggen/iOSWebViewColor-PhoneGap-Plugin/master/screenshot-original.png)
+![ScreenShot](https://raw.github.com/EddyVerbruggen/iOSWebViewColor-PhoneGap-Plugin/master/screenshots/original.png)
 
 iOS 7 screenshot - color changed to #FFFFFF (white):
 
-![ScreenShot](https://raw.github.com/EddyVerbruggen/iOSWebViewColor-PhoneGap-Plugin/master/screenshot-changed.png)
+![ScreenShot](https://raw.github.com/EddyVerbruggen/iOSWebViewColor-PhoneGap-Plugin/master/screenshots/changed-white.png)
+
+iOS 7 screenshot - color changed to #FF0000 (red):
+
+![ScreenShot](https://raw.github.com/EddyVerbruggen/iOSWebViewColor-PhoneGap-Plugin/master/screenshots/changed-red.png)
 
 ## 2. Installation
 
