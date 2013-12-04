@@ -8,8 +8,6 @@
     NSString *hexColor = [command.arguments objectAtIndex:0];
 
     UIColor *theColor = [self colorFromHexString:hexColor];
-
-//    self.webView.opaque = NO;
     self.webView.backgroundColor = theColor;
 
     CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];

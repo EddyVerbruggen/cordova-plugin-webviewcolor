@@ -94,6 +94,10 @@ You can change the background color immediately after `ondeviceready`, but you m
   <button onclick="window.plugins.webviewcolor.change('#FF0000')">change to #FF0000</button>
   <button onclick="window.plugins.webviewcolor.change('#00FF00', function(){alert('color was changed!')}">change to #00FF00</button>
 ```
+.change() has three argument
+* First argument: a valid hex color, formatted like: #FF00FF (including the #)
+* Second argument (optional): a successcallback, so you know when the color has been changed.
+* Third argument (optional): a errorcallback, but this is never called, since changing the color technically never fails. If the passed color is not valid, the color is simply not changed, but the successcallback is invoked. I didn't find an easy way to change this behaviour, but it shouldn't hurt anyone. I've added the errorcallback argument for possible future compatibility.
 
 
 ## 4. Testing
