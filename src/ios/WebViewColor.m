@@ -12,11 +12,11 @@
 //    self.webView.opaque = NO;
     self.webView.backgroundColor = theColor;
 
-    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsInt:avail];
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self writeJavascript:[pluginResult toSuccessCallbackString:callbackId]];
 }
 
-// Assumes input like "#00FF00" (#RRGGBB). --> TODO strip #
+// Assumes input like "#00FF00" (#RRGGBB)
 - (UIColor *)colorFromHexString:(NSString *)hexString {
     unsigned rgbValue = 0;
     NSScanner *scanner = [NSScanner scannerWithString:hexString];
