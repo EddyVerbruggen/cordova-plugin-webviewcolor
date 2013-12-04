@@ -2,8 +2,6 @@
 
 by [Eddy Verbruggen](http://www.x-services.nl)
 
-* These instructions are for PhoneGap 3.0.0 and up.
-
 ## 0. Index
 
 1. [Description](https://github.com/EddyVerbruggen/iOSWebViewColor-PhoneGap-Plugin#1-description)
@@ -19,7 +17,8 @@ by [Eddy Verbruggen](http://www.x-services.nl)
 
 This plugin allows you to change the background color of the iOS WebView.
 
-* Tested on iOS 6.1 and 7.0.
+* Compatible with PhoneGap 3.0.0 and up.
+* Tested on iOS 6.1 and 7.0. Probably works on lower versions, but it's mostly useful for iOS7 anyway.
 * Supports all colors, just pass a valid hex value like #FF0000.
 * Compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman).
 * Pending official support by [PhoneGap Build](https://build.phonegap.com/plugins).
@@ -71,11 +70,8 @@ Copy `WebViewColor.h` and `WebViewColor.h` to `platforms/ios/<ProjectName>/Plugi
 
 ### PhoneGap Build
 
-WebViewColor will soon work with PhoneGap build too! Compatible with PhoneGap 3.0.0 and up.
-
-You can implement the plugin with these simple steps.
-
-1\. Add the following xml to your `config.xml` to always use the latest version of this plugin:
+WebViewColor will soon work with PhoneGap build too!
+Just add the following xml to your `config.xml` to always use the latest version of this plugin:
 ```xml
 <gap:plugin name="nl.x-services.plugins.ioswebviewcolor" />
 ```
@@ -84,11 +80,11 @@ or to use this exact version:
 <gap:plugin name="nl.x-services.plugins.ioswebviewcolor" version="1.0" />
 ```
 
-2\. Nothing.
-WebViewColor.js is brought in automatically. There is no need to change or add anything in your html.
+The required javascript file is brought in automatically. There is no need to change or add anything in your html.
 
 
 ## 3. Usage
+You can change the background color immediately after `ondeviceready`, but you may also want to do it by, for instance, a click of a button:
 ```html
   <button onclick="window.plugins.webviewcolor.change('#FF0000')">change to #FF0000</button>
   <button onclick="window.plugins.webviewcolor.change('#00FF00', function(){alert('color was changed!')}">change to #00FF00</button>
@@ -98,7 +94,7 @@ WebViewColor.js is brought in automatically. There is no need to change or add a
 ## 4. Testing
 The background color change can best be seen by allowing overscroll (rubber banding), so when you swipe up and down, the WebView background is shown.
 
-Another possibility is adding a `<select>` or `<input type="date"`.
+Another possibility is adding a `<select>` or `<input type="date">`.
 When clicked, the background color shines through the native picker UI.
 
 
