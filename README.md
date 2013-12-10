@@ -99,11 +99,6 @@ You can change the background color immediately after `ondeviceready`, but you m
 * (optional) successcallback, so you know when the color has been changed.
 * (optional) errorcallback, but this is never called, since changing the color technically never fails. If the passed color is not valid, the color is simply not changed, but the successcallback is invoked. I didn't find an easy way to change this behaviour, but it shouldn't hurt anyone. I've added the errorcallback argument for possible future compatibility.
 
-You can also make the background transparent:
-```html
-  <button onclick="window.plugins.webviewcolor.transparent()">make transparent</button>
-```
-
 
 ## 4. Testing
 The background color change can best be seen by allowing overscroll (rubber banding), so when you swipe up and down, the WebView background is shown.
