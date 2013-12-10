@@ -4,6 +4,8 @@
 @implementation WebViewColor
 
 - (void)transparent:(CDVInvokedUrlCommand*)command {
+    NSString *callbackId = command.callbackId;
+
     self.webView.opaque = NO;
     self.webView.backgroundColor = [UIColor clearColor];
 
