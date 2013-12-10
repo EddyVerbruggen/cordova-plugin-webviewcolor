@@ -92,7 +92,7 @@ The required javascript file is brought in automatically. There is no need to ch
 You can change the background color immediately after `ondeviceready`, but you may also want to do it by, for instance, a click of a button:
 ```html
   <button onclick="window.plugins.webviewcolor.change('#FF0000')">change to #FF0000</button>
-  <button onclick="window.plugins.webviewcolor.change('#00FF00', function(){alert('color was changed!')}">change to #00FF00</button>
+  <button onclick="window.plugins.webviewcolor.change('#00FF00', function(){alert('color was changed!')})">change to #00FF00</button>
 ```
 .change() has three argument
 * A valid hex color, formatted like: #FF00FF (including the #).
