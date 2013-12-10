@@ -5,6 +5,10 @@ WebViewColor.prototype.change = function (hexColor, successCallback, errorCallba
   cordova.exec(successCallback, errorCallback, "WebViewColor", "change", [hexColor]);
 };
 
+WebViewColor.prototype.transparent = function (successCallback, errorCallback) {
+  cordova.exec(successCallback, errorCallback, "WebViewColor", "transparent", []);
+};
+
 WebViewColor.install = function () {
   if (!window.plugins) {
     window.plugins = {};

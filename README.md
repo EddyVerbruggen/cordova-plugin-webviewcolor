@@ -82,7 +82,7 @@ Just add the following xml to your `config.xml` to always use the latest version
 ```
 or to use this exact version:
 ```xml
-<gap:plugin name="nl.x-services.plugins.ioswebviewcolor" version="1.0" />
+<gap:plugin name="nl.x-services.plugins.ioswebviewcolor" version="1.1" />
 ```
 
 The required javascript file is brought in automatically. There is no need to change or add anything in your html.
@@ -98,6 +98,11 @@ You can change the background color immediately after `ondeviceready`, but you m
 * A valid hex color, formatted like: #FF00FF (including the #).
 * (optional) successcallback, so you know when the color has been changed.
 * (optional) errorcallback, but this is never called, since changing the color technically never fails. If the passed color is not valid, the color is simply not changed, but the successcallback is invoked. I didn't find an easy way to change this behaviour, but it shouldn't hurt anyone. I've added the errorcallback argument for possible future compatibility.
+
+You can also make the background transparent:
+```html
+  <button onclick="window.plugins.webviewcolor.transparent()">make transparent</button>
+```
 
 
 ## 4. Testing

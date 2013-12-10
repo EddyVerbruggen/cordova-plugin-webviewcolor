@@ -3,6 +3,14 @@
 
 @implementation WebViewColor
 
+- (void)transparent:(CDVInvokedUrlCommand*)command {
+    self.webView.opaque = NO;
+    self.webView.backgroundColor = [UIColor clearColor];
+
+    CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [self writeJavascript:[pluginResult toSuccessCallbackString:callbackId]];
+}
+
 - (void)change:(CDVInvokedUrlCommand*)command {
     NSString *callbackId = command.callbackId;
     NSString *hexColor = [command.arguments objectAtIndex:0];
