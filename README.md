@@ -2,6 +2,13 @@
 
 by [Eddy Verbruggen](http://www.x-services.nl)
 
+> **Non-PhoneGap Build users, please read this!**
+>
+> On PhoneGap Build it is not possible to specify the webview background color (hence this plugin), but on local build, you can.
+> Just change this line in MainViewController.m to anything you like: theWebView.backgroundColor = [UIColor blackColor];
+> For example:     theWebView.backgroundColor = [UIColor clearColor];
+>
+
 ## 0. Index
 
 1. [Description](https://github.com/EddyVerbruggen/iOSWebViewColor-PhoneGap-Plugin#1-description)
