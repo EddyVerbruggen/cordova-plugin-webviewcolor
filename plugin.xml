@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="nl.x-services.plugins.ioswebviewcolor"
-        version="1.0.1">
+        id="cordova-plugin-webviewcolor"
+        version="2.0.0">
 
-  <name>iOS WebView background color</name>
+  <name>WebView background color plugin</name>
+
+  <author>Eddy Verbruggen - @EddyVerbruggen</author>
 
   <description>
     This plugin allows you to change the default PhoneGap background color (black).
     Especially on iOS7, when you use the native date picker or a html selectbox,
-    the text is hard to read against the black background.
+    the text is hard to read against the black background (so that's the only currently supported platform).
   </description>
+
+  <keywords>WebView Color, WebView Colour, Background Color, Background Colour</keywords>
 
   <license>MIT</license>
 
