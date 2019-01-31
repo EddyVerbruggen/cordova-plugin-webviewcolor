@@ -14,10 +14,14 @@
 // Assumes input like "#FF00FF00" (#AARRGGBB)
 - (UIColor *)colorFromHexString:(NSString *)hexString {
     unsigned rgbValue = 0;
+    float alphaValue = 1.0;
     NSScanner *scanner = [NSScanner scannerWithString:hexString];
     [scanner setScanLocation:1]; // bypass '#' character
     [scanner scanHexInt:&rgbValue];
-    return [UIColor colorWithRed:((rgbValue & 0x00FF0000) >> 16)/255.0 green:((rgbValue & 0x0000FF00) >> 8)/255.0 blue:(rgbValue & 0x000000FF)/255.0 alpha:((rgbValue & 0xFF000000) >> 24)/255.0];
+    if (hexString.length==9) {
+        alphaValue = ((rgbValue & 0xFF000000) >> 24)/255.0;
+    }
+    return [UIColor colorWithRed:((rgbValue & 0x00FF0000) >> 16)/255.0 green:((rgbValue & 0x0000FF00) >> 8)/255.0 blue:(rgbValue & 0x000000FF)/255.0 alpha:alphaValue];
 }
 
 @end
