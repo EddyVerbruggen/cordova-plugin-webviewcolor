@@ -25,6 +25,7 @@ Created because I can't read the contents of the native `<select>` picker (see s
 * Compatible with PhoneGap 3.0.0 and up.
 * Tested on iOS 6.1 and 7.0. Probably works on lower versions, but it's mostly useful for iOS7 anyway.
 * Supports all colors, just pass a valid hex value like #FF0000.
+* Supports alpha channel, just pass a valid ARGB value like #FF112233 (where FF - alpha channel).
 * Compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman).
 * Pending official support by [PhoneGap Build](https://build.phonegap.com/plugins).
 
@@ -51,9 +52,10 @@ You can change the background color immediately after `ondeviceready`, but you m
 ```html
   <button onclick="window.plugins.webviewcolor.change('#FF0000')">change to #FF0000</button>
   <button onclick="window.plugins.webviewcolor.change('#00FF00', function(){alert('color was changed!')})">change to #00FF00</button>
+  <button onclick="window.plugins.webviewcolor.change('#880000FF', function(){alert('color was changed!')})">change to semi-transparent blue</button>
 ```
 .change() has three argument
-* A valid hex color, formatted like: #FF00FF (including the #).
+* A valid RGB or ARGB color, formatted like: #FF00FF or #FF112233 (including the #).
 * (optional) successcallback, so you know when the color has been changed.
 * (optional) errorcallback, but this is never called, since changing the color technically never fails. If the passed color is not valid, the color is simply not changed, but the successcallback is invoked. I didn't find an easy way to change this behaviour, but it shouldn't hurt anyone. I've added the errorcallback argument for possible future compatibility.
 
