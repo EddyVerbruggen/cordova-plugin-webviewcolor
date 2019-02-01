@@ -23,7 +23,6 @@ This plugin allows you to change the background color of the iOS WebView.
 Created because I can't read the contents of the native `<select>` picker (see screenshots below).
 
 * Compatible with PhoneGap 3.0.0 and up.
-* Tested on iOS 6.1 and 7.0. Probably works on lower versions, but it's mostly useful for iOS7 anyway.
 * Supports all colors, just pass a valid hex value like #FF0000.
 * Supports alpha channel, just pass a valid ARGB value like #FF112233 (where FF - alpha channel).
 * Compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman).
