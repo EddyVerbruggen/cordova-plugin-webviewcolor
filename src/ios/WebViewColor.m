@@ -7,6 +7,7 @@
     NSString *hexColor = [command.arguments objectAtIndex:0];
     UIColor *theColor = [self colorFromHexString:hexColor];
     self.webView.backgroundColor = theColor; 
+    self.webView.scrollView.backgroundColor = theColor;
     self.viewController.view.backgroundColor = theColor;
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
